@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class LogicalOperators 
+public class DrivingLicense
 {
     public static void main(String[] args) 
     {

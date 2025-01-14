@@ -1,7 +1,5 @@
-public class StringClass 
-{
-   public static void main(String[] args) 
-   {
+public class StringClass {
+   public static void main(String[] args){
         String title = "Java Programming";
         
         int titleLength = title.length();
@@ -16,12 +14,10 @@ public class StringClass
         System.out.println(titleLength);
         System.out.println(aLetter);
 
-        if (likelyVerb)
-        {
+        if (likelyVerb){
             System.out.println("The variable probably holds a verb.");
         }
-        else
-        {
+        else{
             System.out.println("The variable might not be a verb.");
         }
 

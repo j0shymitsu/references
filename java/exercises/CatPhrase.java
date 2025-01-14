@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class StringClassExercise 
+public class CatPhrase
 {
     public static void main(String[] args) 
     {

@@ -1,4 +1,4 @@
-public class FurtherForLoops 
+public class LessThanMoreThan
 {
     public static void main(String[] args) 
     {
