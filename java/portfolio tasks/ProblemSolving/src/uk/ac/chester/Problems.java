@@ -1,5 +1,6 @@
 package uk.ac.chester;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Problems
@@ -67,6 +68,54 @@ public class Problems
          int[] tileValue = new int[]{1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10};
 
         return tileValue[scrabbleLetter - 'a'];
+     }
+
+     // 2nd version
+     static int scrabbleTileValue2(char inputLetter)
+     {
+        char scrabbleLetter = Character.toLowerCase(inputLetter);
+
+        ArrayList<Character> onePointLetters = new ArrayList<>(Arrays.asList('a', 'e', 'i', 'l', 'n', 'o', 'r', 's', 't', 'u'));
+        ArrayList<Character> twoPointLetters = new ArrayList<>(Arrays.asList('d', 'g'));
+        ArrayList<Character> threePointLetters = new ArrayList<>(Arrays.asList('b', 'c', 'm', 'p'));
+        ArrayList<Character> fourPointLetters = new ArrayList<>(Arrays.asList('f', 'h', 'v', 'w', 'y'));
+        ArrayList<Character> fivePointLetters = new ArrayList<>(Arrays.asList('k'));
+        ArrayList<Character> eightPointLetters = new ArrayList<>(Arrays.asList('j', 'x'));
+        ArrayList<Character> tenPointLetters = new ArrayList<>(Arrays.asList('q', 'z'));
+
+        if(onePointLetters.contains(scrabbleLetter))
+        {
+            return 1;
+        }
+        else if(twoPointLetters.contains(scrabbleLetter))
+        {
+            return 2;
+        }
+        else if(threePointLetters.contains(scrabbleLetter))
+        {
+            return 3;
+        }
+        else if(fourPointLetters.contains(scrabbleLetter))
+        {
+            return 4;
+        }
+        else if(fivePointLetters.contains(scrabbleLetter))
+        {
+            return 5;
+        }
+        else if(eightPointLetters.contains(scrabbleLetter))
+        {
+            return 8;
+        }
+        else if(tenPointLetters.contains(scrabbleLetter))
+        {
+            return 10;
+        }
+        else
+        {
+            return 0;
+        }
+
      }
 
 
