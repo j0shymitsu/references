@@ -70,54 +70,7 @@ public class Problems
         return tileValue[scrabbleLetter - 'a'];
      }
 
-     // 2nd version
-     static int scrabbleTileValue2(char inputLetter)
-     {
-        char scrabbleLetter = Character.toLowerCase(inputLetter);
-
-        ArrayList<Character> onePointLetters = new ArrayList<>(Arrays.asList('a', 'e', 'i', 'l', 'n', 'o', 'r', 's', 't', 'u'));
-        ArrayList<Character> twoPointLetters = new ArrayList<>(Arrays.asList('d', 'g'));
-        ArrayList<Character> threePointLetters = new ArrayList<>(Arrays.asList('b', 'c', 'm', 'p'));
-        ArrayList<Character> fourPointLetters = new ArrayList<>(Arrays.asList('f', 'h', 'v', 'w', 'y'));
-        ArrayList<Character> fivePointLetters = new ArrayList<>(Arrays.asList('k'));
-        ArrayList<Character> eightPointLetters = new ArrayList<>(Arrays.asList('j', 'x'));
-        ArrayList<Character> tenPointLetters = new ArrayList<>(Arrays.asList('q', 'z'));
-
-        if(onePointLetters.contains(scrabbleLetter))
-        {
-            return 1;
-        }
-        else if(twoPointLetters.contains(scrabbleLetter))
-        {
-            return 2;
-        }
-        else if(threePointLetters.contains(scrabbleLetter))
-        {
-            return 3;
-        }
-        else if(fourPointLetters.contains(scrabbleLetter))
-        {
-            return 4;
-        }
-        else if(fivePointLetters.contains(scrabbleLetter))
-        {
-            return 5;
-        }
-        else if(eightPointLetters.contains(scrabbleLetter))
-        {
-            return 8;
-        }
-        else if(tenPointLetters.contains(scrabbleLetter))
-        {
-            return 10;
-        }
-        else
-        {
-            return 0;
-        }
-
-     }
-
+    
 
 
 
