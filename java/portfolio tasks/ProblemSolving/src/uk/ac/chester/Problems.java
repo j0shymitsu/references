@@ -1,5 +1,6 @@
 package uk.ac.chester;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Problems
@@ -69,6 +70,7 @@ public class Problems
         return tileValue[scrabbleLetter - 'a'];
      }
 
+    
 
 
 
