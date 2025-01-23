@@ -1,4 +1,6 @@
-public class Calculations 
+package syntax;
+
+public class Calculations
 {
     public static void main(String[] args) 
     {

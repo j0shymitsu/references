@@ -1,4 +1,6 @@
-public class EscapeCharacters 
+package syntax;
+
+public class EscapeCharacters
 {
     public static void main(String[] args) 
     {

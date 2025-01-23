@@ -1,4 +1,6 @@
-public class Concatenation 
+package syntax;
+
+public class StringConcatenation
 {
     public static void main(String[] args) 
     {
@@ -6,7 +8,8 @@ public class Concatenation
         String songLine = "Happy birthday to you\n";
         String song = songLine + songLine + "Happy birthday dear " + birthdayPerson + songLine;
         
-        System.out.println(song);
+        System.out.print(song);
+        System.out.println();
 
         song += songLine;
 

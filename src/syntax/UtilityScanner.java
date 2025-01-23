@@ -1,10 +1,14 @@
-public class Scanner
+package syntax;
+
+import java.util.Scanner;
+
+public class UtilityScanner
 {
     public static void main(String[] args) 
     {
         System.out.println("Please type your name:");
 
-        java.util.Scanner inputScanner = new java.util.Scanner(System.in);
+        Scanner inputScanner = new Scanner(System.in);
 
         String userName = inputScanner.nextLine();
 
