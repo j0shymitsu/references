@@ -28,3 +28,7 @@ print(math.sqrt(9))
 num = 16_000
 num = 16_000_000
 print(num)
+
+## Representing a number in binary
+print(0b0001)
+print(0b0101)
