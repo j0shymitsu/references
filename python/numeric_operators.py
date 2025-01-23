@@ -23,3 +23,8 @@ print(c**2) # Square of "c".
 # Square root needs the math library
 import math
 print(math.sqrt(9))
+
+# Python allows underscores for delimiters
+num = 16_000
+num = 16_000_000
+print(num)

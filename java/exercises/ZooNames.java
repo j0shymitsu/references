@@ -1,12 +1,12 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class ZooNames 
+public class ZooNames
 {
-    public static void main(String[] args) 
+    public static void main(String[] args)
     {
         // initialise ArrayList for animals
-        ArrayList<String> animalList = new ArrayList<String>();    
+        ArrayList<String> animalList = new ArrayList<String>();
 
         // initialise scanner
         Scanner inputScanner = new Scanner(System.in);
@@ -22,11 +22,7 @@ public class ZooNames
             {
                 break;
             }
-            else if(newAnimal)
-            {
-                System.out.println("Animal is already in database, please enter a new name.");
-            }
 
         }
-    } 
+    }
 }
