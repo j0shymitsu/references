@@ -24,7 +24,7 @@ public class IfStatement
 
         if(age < 18)
         {
-            System.out.println("You cannot buy alcohol");
+            System.out.println("You cannot buy alcoho");
         }
     }
 }

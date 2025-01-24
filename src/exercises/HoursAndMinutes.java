@@ -1,4 +1,4 @@
-public class ForLoopsExercises 
+public class HoursAndMinutes
 {
     public static void main(String[] args) 
     {

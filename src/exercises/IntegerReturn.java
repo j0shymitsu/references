@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class DataTypesExercise
+public class IntegerReturn
 {
     public static void main(String[] args)
     {
