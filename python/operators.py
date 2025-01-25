@@ -2,8 +2,6 @@ import math # Imports math library; can be declared anywhere in code.
 
 ### OPERATORS ###
 
-
-
 # Define a string
 x = "Hello Josh"
 print(x)
@@ -54,10 +52,13 @@ print("\n")
 a = 20
 b = 25
 c = 5
+d = 1.024e18 # Scientific notation
 
 print(a+b) # Add two numbers.
 print(a-b) # Subtract two numbers.
 print(a*b) # Divide two numbers.
+print(a//b) # Floor division
+print(a**b) # Exponent
 print("\n")
 
 a = a+1 # Add 1 to "a".
@@ -75,8 +76,8 @@ rate = 12.50
 pay = hours * rate
 print(pay)
 print("\n")
-## Numeric Expressions
 
+## Numeric Expressions
 xx = 2
 xx = xx + 2
 print(xx)
@@ -92,3 +93,40 @@ kk = jj % 5
 print(kk)
 
 print(4 ** 3)
+
+
+
+### MATHEMATICAL OPERATORS ###
+
+a = 20
+b = 25
+c = 5
+
+print(a + b) # Add two numbers.
+print(a - b) # Subtract two numbers.
+print(b * a) # Multiply two numbers.
+print(b / a) # Divide two numbers.
+
+a = a + 1 # Increment "a" by 1.
+print(a)
+
+a += 1 # Increment "a" by 1.
+print (a)
+
+a -= 1 # Decrement "a" by 1.
+print(a)
+
+print(c**2) # Square of "c".
+
+# Square root needs the math library
+import math
+print(math.sqrt(9))
+
+# Python allows underscores for delimiters
+num = 16_000
+num = 16_000_000
+print(num)
+
+## Representing a number in binary
+print(0b0001)
+print(0b0101)
