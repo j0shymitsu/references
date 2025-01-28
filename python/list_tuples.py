@@ -88,7 +88,13 @@ print()
 
 stations.pop()
 print(f"The train will now be terminating at {stations[-1]}")
+print()
 
+# Tuple unpacking
+dog = ("Fido", 4)
+dog_name, dog_age = dog
+print(dog_name)
+print(dog_age)
 
 
 

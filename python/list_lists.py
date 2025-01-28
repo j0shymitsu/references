@@ -89,7 +89,26 @@ numbers = [n**2 for n in range(1, 6)]
 print(numbers)
 print()
     
+# List slicing
+    # my_list[start : stop : step] < syntax
+scores = [50, 70, 30, 20, 90, 10, 50]
+scores[1:5:2] # Slice from 1, up to (but not including) 5, every 2nd value
+scores[:3] # Get all items from start up to (but not including) 3
+scores[3:] # Get all items from index 3 to end
+scores[::2] # Just the step function
+scores[-1] # Gives last item
+scores[-2] # Gives second last item
+scores[-3:] # Gives last 3 items
 
+# List concatenation
+total = [1, 2, 3] + [4, 5, 6]
 
+# Contains
+fruits = ["apple", "orange", "banana"]
+print("banana" in fruits) # returns True
 
-
+# Delete
+num_list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+del num_list[3] # Deletes item 4/index 3
+del num_list[1:3] # Deletes item 2 up to (not inc) item 4
+del num_list[:] # Deletes all elements 

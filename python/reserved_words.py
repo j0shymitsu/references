@@ -1,0 +1,35 @@
+# RESERVED WORDS
+
+# False
+# None
+# True
+# and
+# as
+# assert
+# break
+# class
+# if
+# def
+# del
+# elif
+# else
+# except
+# return
+# for 
+# from
+# global
+# try
+# import
+# in
+# is
+# lambda 
+# while
+# not
+# or
+# pass
+# raise
+# finally
+# continue
+# nonlocal
+# with
+# yield
