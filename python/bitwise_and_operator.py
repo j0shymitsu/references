@@ -1,5 +1,3 @@
-### BITWISE AND
-
 # Equals 5; checks if true (1) in both positions and returns resulting binary num
 print(0b0101 & 0b0111)
 
@@ -26,16 +24,3 @@ def get_delete_bits(user_permissions):
 def get_edit_bits(user_permissions):
     user_edit_guild_permission = user_permissions & can_edit_guild
     return user_edit_guild_permission
-
-
-### BITWISE OR
-
-a = 0b0101  # 5
-b = 0b0011  # 3
-
-# Perform bitwise OR
-result = a | b
-
-print(f"a = {a} (Binary: {bin(a)})")
-print(f"b = {b} (Binary: {bin(b)})")
-print(f"Result of a | b: {result} (Binary: {bin(result)})")
