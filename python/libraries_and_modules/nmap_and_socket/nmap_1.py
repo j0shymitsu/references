@@ -14,13 +14,15 @@ print("Alive hosts: ", alive_hosts)
 print("\n\n")
 
 for target in alive_hosts:
-    scanner = nmap.PortScanner()
-    scanner.scan(target, arguments='-sS')
-    print("Target: ", target)
+    print(f"Scanning {target}")
+    scanner.scan(target, arguments='-F')
+    # args = 100 most common ports (rate limiting issues)
 
-    try:
-        for port in scanner[target]['tcp']:
-            service = scanner[target]['tcp'][port]['name']
-            print('port {}: {}'.format(port, service), 'is OPEN')
-    except KeyError:
-        print("No open ports on ", target)
+    open_ports = scanner[target].get('tcp', {})
+    if open_ports:
+        for port, info in open_ports.items():
+            print(f"Port {port}: {info['name']} is open")
+    else:
+        print(f"No open ports on {target}")
+
+    print("\n\n")
