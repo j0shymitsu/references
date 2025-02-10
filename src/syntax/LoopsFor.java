@@ -10,14 +10,14 @@ public class LoopsFor
         }
         System.out.println();
         
-        for(int i = 1, j = 10; i <= 10 && j >= 0; i++, j--)    // need to be same type
+        for(int i = 1, j = 10; i <= 10 && j >= 0; i++, j--)    // conditions need to be same type
         {
             System.out.println("i" + i);
             System.out.println("j" + j);
         }
         System.out.println();
 
-        for(int i = 1, j = 1; i <= 144;) 
+        for(int i = 1, j = 1; i <= 144;)    // fibonacci sequence example
         {
             System.out.println(i);
             int total = i + j;
