@@ -4,25 +4,26 @@ import java.util.Scanner;
 
 public class MethodMultipleParameters 
 {
-    public static void main(String[] args) 
+    public static void main(String[] args)
     {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Type a phrase");
         String phrase = scanner.nextLine();
 
-        trimWithElipsis(phrase, 5);
+        String trimmedPhrase = trimWithEllipsis(phrase, 5);
+        System.out.println(trimmedPhrase);
     }
     
-    static void trimWithElipsis(String text, int length)
+    static String trimWithEllipsis(String text, int length)
     {
         if(text.length() > length)
         {
             String shortPhrase = text.substring(0, length).trim() + "...";
-            System.out.println(shortPhrase);
+            return shortPhrase;
         }
         else
         {
-            System.out.println(text);
-        }   
+            return text;
+        }
     }  
 }

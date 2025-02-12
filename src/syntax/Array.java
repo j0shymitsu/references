@@ -1,3 +1,5 @@
+package syntax;
+
 public class Array
 {
     public static void main(String[] args) 
@@ -8,7 +10,9 @@ public class Array
         */
 
         int[] marks = new int[]{23, 65, 77, 12};
-        int secondMark = marks[1];
+        int secondMark = marks[1];    // retrieve value from index
+        marks[0] = 24;    // assigning a new value to an array index
+        marks[1] = 66;
 
         String[] names = new String[]{"Josh", "Java", "Python", "Ruby", "Haskell"};    // Array literal
         names[3] = "Golang";

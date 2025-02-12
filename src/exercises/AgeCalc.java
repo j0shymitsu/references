@@ -39,15 +39,13 @@ public class AgeCalc
     static int getCurrentYear()
     {
         Calendar gregorianCalendar = new GregorianCalendar();
-        int currentYear = gregorianCalendar.get(Calendar.YEAR);
-        return currentYear;
+        return gregorianCalendar.get(Calendar.YEAR);
     }
 
     static int getUserInteger(String message)
     {
         System.out.println(message);
-        int userInt = scanner.nextInt();
-        return userInt;
+        return scanner.nextInt();
     }
 
     static void calculateAge()
