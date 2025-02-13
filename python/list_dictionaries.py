@@ -148,3 +148,5 @@ print()
 scores.setdefault("Harry", 90)
 print(scores)
 print()
+
+del scores["Alan"]    # Removes the key and value pair
