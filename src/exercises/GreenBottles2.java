@@ -1,4 +1,6 @@
-public class GreenBottles2 
+package exercises;
+
+public class GreenBottles2
 {
     public static void main(String[] args) 
     {

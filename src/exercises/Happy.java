@@ -1,4 +1,6 @@
-public class Happy 
+package exercises;
+
+public class Happy
 {
     public static void main(String[] args) 
     {

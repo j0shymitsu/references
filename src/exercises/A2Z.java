@@ -1,4 +1,6 @@
-public class A2Z 
+package exercises;
+
+public class A2Z
 {
     public static void main(String[] args) 
     {

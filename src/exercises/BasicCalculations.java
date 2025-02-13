@@ -1,4 +1,6 @@
-public class BasicCalculations 
+package exercises;
+
+public class BasicCalculations
 {
     public static void main(String[] args) 
     {

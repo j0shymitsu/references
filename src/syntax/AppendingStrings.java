@@ -1,4 +1,6 @@
-public class AppendingStrings 
+package syntax;
+
+public class AppendingStrings
 {
     public static void main(String[] args)
     {

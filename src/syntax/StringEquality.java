@@ -1,4 +1,6 @@
-public class StringEquality 
+package syntax;
+
+public class StringEquality
 {
     public static void main(String[] args) 
     {

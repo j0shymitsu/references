@@ -1,4 +1,6 @@
-public class OneToHundred 
+package exercises;
+
+public class OneToHundred
 {
     public static void main(String[] args) 
     {

@@ -1,3 +1,5 @@
+package exercises;
+
 public class LessThanMoreThan
 {
     public static void main(String[] args) 

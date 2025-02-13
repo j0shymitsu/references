@@ -1,4 +1,6 @@
-public class StringVariables 
+package syntax;
+
+public class StringVariables
 {
     public static void main(String[] args) 
     {
