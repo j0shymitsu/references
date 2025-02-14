@@ -30,7 +30,7 @@ public class ArrayLists
 
         System.out.println();
 
-        /* */
+        //
 
         String secondLang = langList.get(1);
         System.out.println(secondLang);
@@ -43,7 +43,7 @@ public class ArrayLists
 
         System.out.println();
 
-        /* */
+        //
 
         langList.set(2, "JavaScript");  // replace an element
         langList.add(1, "Ruby");    // add an element at given index
@@ -67,9 +67,17 @@ public class ArrayLists
 
         System.out.println();
 
-        /* */
+        //
 
         int length = langList.size();
         System.out.println("Language list has " + length + " items");
+        System.out.println();
+
+        /* Other ArrayList Methods */
+
+        System.out.println(langList.isEmpty());    // checks if an ArrayList is empty
+        System.out.println(langList.size());    // returns sized of list
+
+
     }    
 }
