@@ -78,6 +78,9 @@ public class ArrayLists
         System.out.println(langList.isEmpty());    // checks if an ArrayList is empty
         System.out.println(langList.size());    // returns sized of list
 
+        /* Converting an ArrayList to a standard array */
+
+        Object[] stringArray = langList.toArray();
 
     }    
 }
