@@ -1,4 +1,11 @@
 package exercises;
+import java.io.IOException;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -38,6 +45,8 @@ public class ZooNames
         {
             System.out.println(animalName);
         }
+
+        arrayListToFile(animalNames);
     }
 
     // method to handle user input
@@ -54,6 +63,21 @@ public class ZooNames
             System.out.println("\nAnimal " + animalName + " added to database!");
 
         }
+    }
 
+    // method to write to file
+    private static void arrayListToFile(ArrayList<String> arrayList)
+    {
+        Path location = Paths.get("data/zoonames.txt");
+        Charset utf8 = StandardCharsets.UTF_8;
+
+        try
+        {
+            Files.write(location, arrayList, utf8, StandardOpenOption.APPEND);
+        }
+        catch (IOException e)
+        {
+            System.out.println("The file could not be saved");
+        }
     }
 }
