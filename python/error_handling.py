@@ -2,6 +2,21 @@
 ### ERROR HANDLING ###
 ######################
 
+# Basic example
+try:
+    10/0
+except ZeroDivisionError:
+    print("0 division")
+except Exception as e:
+    print(e)
+
+try:
+    nums = [0, 1]
+    print(nums[2])
+except IndexError:
+    print("index error")
+except Exception as e:
+    print(e)
 
 
 # Division example
@@ -54,3 +69,35 @@ while bad_input:
     finally:
         if bad_input == True:
             print("Please try again.")
+
+# In functions
+
+def process_player_record(player_id):
+    try:
+        return get_player_record(player_id)
+    except IndexError:
+        return "index is too high"
+    except Exception as e:
+        return e 
+
+def get_player_record(player_id):
+    if player_id < 0:
+        raise Exception("negative ids not allowed")
+    players = [
+        {"name": "Slayer", "level": 128},
+        {"name": "Dorgoth", "level": 300},
+        {"name": "Saruman", "level": 4000},
+    ]
+    return players[player_id]
+
+
+# Unhandled / raised exception
+
+def purchase_item(price, gold_available):
+    if price > gold_available:
+        raise Exception ("not enough gold")
+    else:
+        return gold_available - price
+    
+
+

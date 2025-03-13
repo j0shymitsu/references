@@ -150,3 +150,17 @@ print(scores)
 print()
 
 del scores["Alan"]    # Removes the key and value pair
+
+
+# iterating over dictionaries
+
+rectangles = {"height": 20,
+              "width": 40}
+
+def area_sum(rectangles):
+    sum = 0
+    for rectangle in rectangles:
+        area = rectangle["height"] * rectangle["width"]    # access values using string keys in quotes
+        sum += area
+
+    return sum
