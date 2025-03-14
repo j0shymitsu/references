@@ -97,3 +97,13 @@ print("Set 2 is", d)
 print("Set 3 is", x)
 print("Set 4 is", y)
 
+
+def remove_duplicates(spells):
+    spells = set(spells)
+    unique_spells = []
+
+    for item in spells:
+        unique_spells.append(item)
+
+    return unique_spells
+

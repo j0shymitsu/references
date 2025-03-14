@@ -150,3 +150,39 @@ print(scores)
 print()
 
 del scores["Alan"]    # Removes the key and value pair
+
+# iterating over a dictionary
+def get_most_common_enemy(enemies_dict):
+    max_so_far = float("-inf")
+    max_name = None
+
+    for name in enemies_dict:
+        count = enemies_dict[name]
+        if count > max_so_far:
+            max_so_far = count
+            max_name = name
+
+    return max_name
+
+# more iterating functions
+def merge(dict1, dict2):
+    new_dict = {}
+    
+    for quarter in dict1:
+        score = dict1[quarter]
+        new_dict[quarter] = score
+
+    for quarter in dict2:
+        score = dict2[quarter]
+        new_dict[quarter] = score
+
+    return new_dict
+
+
+def total_score(score_dict):
+    total = 0
+    for quarter in score_dict:
+        score = score_dict[quarter]
+        total += score
+
+    return total
