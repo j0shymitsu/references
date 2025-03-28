@@ -21,4 +21,14 @@ public class Odometer
     {
         totalMilesTravelled += miles;
     }
+
+    public double addTrip(double miles)
+    {
+        double thisTrip = miles;
+        totalMilesTravelled += miles;
+
+        System.out.println("New total mileage:\n" + totalMilesTravelled);
+        System.out.println("\nMileage this trip:");
+        return thisTrip;
+    }
 }
