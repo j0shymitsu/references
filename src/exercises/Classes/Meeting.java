@@ -20,6 +20,25 @@ public class Meeting
     }
 
     // Getters
+    public String getLocation()
+    {
+        return location;
+    }
+
+    public LocalDateTime getStartTime()
+    {
+        return startTime;
+    }
+
+    public double getDuration()
+    {
+        return duration;
+    }
+
+    public String getNotes()
+    {
+        return notes;
+    }
 
     // Setters
     public void setStartTime(int days)

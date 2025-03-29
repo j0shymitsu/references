@@ -1,6 +1,6 @@
-package syntax.classes;
+package syntax.Classes;
 
-public class Module
+public class ClassesOne
 {
     /* FIELDS */
     // module code: CO4225 (two letters, four numbers) = String
@@ -18,13 +18,13 @@ public class Module
     // level of module (calculate)
 
     /* CONSTRUCTORS */
-    public Module(String code, String title)
+    public ClassesOne(String code, String title)
     {
         this.code = code;
         this.title = title;
     }
 
-    public Module(String code, String title, int credits)
+    public ClassesOne(String code, String title, int credits)
     {
         this(code, title);
         this.credits = credits;
