@@ -9,6 +9,7 @@ public class Meeting
     private LocalDateTime startTime;
     private double duration;
     private String notes;
+    private State state;
 
     // Constructor
     public Meeting(String location, LocalDateTime startTime, double duration, String notes)
@@ -40,11 +41,17 @@ public class Meeting
         return notes;
     }
 
+
     // Setters
     public void setStartTime(int days)
     {
         LocalDateTime newDate = LocalDateTime.from(startTime.plusDays(days));
         startTime = newDate;
+    }
+
+    public void setState(State state)
+    {
+        this.state = state;
     }
 
     // Methods
@@ -57,5 +64,6 @@ public class Meeting
 
         return duration;
     }
+
 
 }
