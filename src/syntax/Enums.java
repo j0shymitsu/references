@@ -8,11 +8,11 @@ public class Enums
 
     public static void main(String[] args)
     {
-        ClothingItem tShirt = new ClothingItem("black T-shirt", Category.MENS, 1599);
-        ClothingItem skirt = new ClothingItem("blue skirt", Category.WOMENS, 2599);
-        ClothingItem tights = new ClothingItem("grey tights", Category.WOMENS, 499);
-        ClothingItem dress = new ClothingItem("red dress", Category.WOMENS, 3499);
-        ClothingItem jeans = new ClothingItem("kids jeans", Category.CHILDRENS, 699);
+        ClothingItem tShirt = new ClothingItem("black T-shirt", Enum.MENS, 1599);
+        ClothingItem skirt = new ClothingItem("blue skirt", Enum.WOMENS, 2599);
+        ClothingItem tights = new ClothingItem("grey tights", Enum.WOMENS, 499);
+        ClothingItem dress = new ClothingItem("red dress", Enum.WOMENS, 3499);
+        ClothingItem jeans = new ClothingItem("kids jeans", Enum.CHILDRENS, 699);
 
         allClothes.add(tShirt);
         allClothes.add(skirt);
@@ -30,14 +30,14 @@ public class Enums
     {
         // ivar
         final private String name;
-        final private Category category;
+        final private Enum anEnum;
         private int price;
 
         // constructor
-        public ClothingItem(String name, Category category, int price)
+        public ClothingItem(String name, Enum anEnum, int price)
         {
             this.name = name;
-            this.category = category;
+            this.anEnum = anEnum;
             this.price = price;
         }
 
@@ -47,9 +47,9 @@ public class Enums
             return name;
         }
 
-        public Category getCategory()
+        public Enum getCategory()
         {
-            return category;
+            return anEnum;
         }
 
         public int getPrice()
@@ -64,7 +64,7 @@ public class Enums
 
         for (ClothingItem clothingItem : allClothes)
         {
-            if (clothingItem.getCategory() == Category.WOMENS)
+            if (clothingItem.getCategory() == Enum.WOMENS)
             {
                 womens.add(clothingItem);
             }
