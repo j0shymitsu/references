@@ -35,5 +35,23 @@ public class Main
 
         Meeting meetingOne = new Meeting("Chester", dateTime, 30.00, "Meeting");
         meetingOne.setState(State.BUSY);
+
+        // TripComputer (inheritance)
+        OdometerWithTripComputer tripComputer = new OdometerWithTripComputer(0);
+        tripComputer.addMileage(148.32);
+        System.out.println("Total mileage: " + tripComputer.getTotalMilesTravelled());
+        System.out.println("Trip mileage: " + tripComputer.currentTripMileage());
+        tripComputer.resetTripCounter();
+        tripComputer.addMileage(217.16);
+        System.out.println("Total mileage: " + tripComputer.getTotalMilesTravelled());
+        System.out.println("Trip mileage:" + tripComputer.currentTripMileage());
+        System.out.println();
+
+        AdvancedTripComputer advancedTripComputer = new AdvancedTripComputer(190);
+        advancedTripComputer.addMileage(120);
+        advancedTripComputer.addFuelUsed(2.1);
+        advancedTripComputer.calculateMPG();
+        System.out.println(advancedTripComputer.calculateMPG());
+
     }
 }
