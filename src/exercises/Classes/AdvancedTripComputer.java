@@ -37,4 +37,5 @@ public class AdvancedTripComputer extends OdometerWithTripComputer
     {
         return fuelUsedSinceReset;
     }
+
 }

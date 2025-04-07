@@ -65,5 +65,9 @@ public class Meeting
         return duration;
     }
 
-
+    @Override
+    public String toString()
+    {
+        return "Meeting in " + getLocation() + " at " + getStartTime();
+    }
 }

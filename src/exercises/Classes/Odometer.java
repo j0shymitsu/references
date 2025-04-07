@@ -7,7 +7,7 @@ public class Odometer
     static final String NAUTICAL_MILES = "nauticalMiles";
 
     private double totalMilesTravelled;
-    private DistanceUnit displayUnits;
+    private DistanceUnit displayUnits = DistanceUnit.MILES;
 
     // Constructor
     public Odometer()
@@ -56,5 +56,11 @@ public class Odometer
     public void setDisplayUnits(DistanceUnit displayUnits)
     {
         this.displayUnits = displayUnits;
+    }
+
+    @Override
+    public String toString()
+    {
+        return "Odometer " + Double.toString(totalMilesTravelled);
     }
 }

@@ -52,6 +52,13 @@ public class Main
         advancedTripComputer.addFuelUsed(2.1);
         advancedTripComputer.calculateMPG();
         System.out.println(advancedTripComputer.calculateMPG());
+        System.out.println();
+
+        // Overrides
+        System.out.println(odo);    // implicitly calls odo.ToString()
+        System.out.println();
+        System.out.println(tripComputer);    // Task (as above)
+        System.out.println(meetingOne);
 
     }
 }

@@ -21,4 +21,10 @@ public class OdometerWithTripComputer extends Odometer
         return getTotalMilesTravelled() - tripStartMileage;
     }
 
+    @Override
+    public String toString()
+    {
+        return "Class: " + getClass() + "\nTotal Mileage: " + getTotalMilesTravelled() + "\nTrip Mileage: " +
+                getTotalDistanceTravelled();
+    }
 }
