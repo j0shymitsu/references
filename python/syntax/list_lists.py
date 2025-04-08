@@ -112,3 +112,12 @@ num_list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 del num_list[3] # Deletes item 4/index 3
 del num_list[1:3] # Deletes item 2 up to (not inc) item 4
 del num_list[:] # Deletes all elements 
+
+# iterating with enumerate
+def join_strings(strings):
+    concat = ""
+    for i, string in enumerate(strings):
+        concat += string
+        if i < len(strings) - 1:
+            concat += ","
+    return concat
