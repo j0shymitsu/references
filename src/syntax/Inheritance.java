@@ -13,7 +13,7 @@ public class Inheritance
     {
         Date today = new Date();
         Employee josh = new Employee("Josh", "Birch", today);
-        Employee elon = new Employee("elon", "Musk", DateFunctions.thisTimeLastYear());
+        Employee elon = new Employee("Elon", "Musk", DateFunctions.thisTimeLastYear());
 
         Date nextYear = DateFunctions.addDays(today, 365);
         TemporaryEmployee bill = new TemporaryEmployee("Bill", "Gates", today, nextYear);

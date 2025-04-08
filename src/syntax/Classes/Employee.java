@@ -1,12 +1,16 @@
 package syntax.Classes;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Employee
+public class Employee implements Serializable
 {
     private String forename;
     private String surname;
     private Date startDate;
+
+    // temp; not stored on disk - "transient"
+    transient String vehicleOnLoan;
 
     // constructor
     public Employee(String forename, String surname, Date startDate)
@@ -41,5 +45,11 @@ public class Employee
     public void setSurname(String surname)
     {
         this.surname = surname;
+    }
+
+    @Override
+    public String toString()
+    {
+        return "Employee " + forename + " " + surname + " started " + startDate;
     }
 }
