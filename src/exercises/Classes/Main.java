@@ -1,6 +1,8 @@
 package exercises.Classes;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main
 {
@@ -59,6 +61,66 @@ public class Main
         System.out.println();
         System.out.println(tripComputer);    // Task (as above)
         System.out.println(meetingOne);
+        System.out.println();
 
+        // method overloading
+        HomeAppliance appliance = new HomeAppliance();
+        describe(appliance);
+
+        Kettle kettle = new Kettle();
+        describe(kettle);
+        kettle.boil();
+
+        HomeAppliance newKettle = new Kettle();
+        describe(kettle);
+        kettle.boil();
+
+        System.out.println();
+
+        ArrayList<HomeAppliance> appliances = new ArrayList<>();
+        appliances.add(appliance);
+        appliances.add(kettle);
+
+        for (HomeAppliance someAppliance : appliances)
+        {
+            someAppliance.describe();    // implement like this for overrides
+        }
+        System.out.println();
+
+
+        //
+
+        Animal bird = new Animal();
+        Dog dog = new Dog();
+
+        List<Animal> animals = new ArrayList<>();
+        animals.add(bird);
+        animals.add(dog);
+
+        for (Animal animal : animals)
+        {
+            describe(animal);
+        }
+    }
+
+    // method overloading
+    static void describe(HomeAppliance appliance)
+    {
+        System.out.println("This is a home appliance");
+    }
+
+    static void describe(Kettle kettle)
+    {
+        System.out.println("This is a kettle");
+    }
+
+    static void describe(Animal animal)
+    {
+        System.out.println("An animal");
+    }
+
+    static void describe(Dog dog)
+    {
+        System.out.println("A dog");
     }
 }
