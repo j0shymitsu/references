@@ -36,6 +36,13 @@ public class GUI
                 String title = (String) objectFromComboBox;
                 String message = "Hello " + title + " " + nameTextField.getText();
                 greetingLabel.setText(message);
+
+                JOptionPane.showMessageDialog(null, "Message");
+                // Also:
+                // ERROR_MESSAGE
+                // QUESTION_MESSAGE
+                // PLAIN_MESSAGE
+
                 frame.pack();
             }
         });
