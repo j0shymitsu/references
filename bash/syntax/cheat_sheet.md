@@ -106,3 +106,35 @@ echo $?     # last commands exit status
 ```bash
 !/bin/bash
 ```
+
+## Misc
+```bash
+top    # tskmgr, essentially 
+```
+
+## grep
+```bash
+grep 'string' filename                  # Search for string in a file
+grep 'string' file1 file2               # Search in multiple files
+grep -r 'string' /path/to/directory     # Recursive search in directories
+
+# Common Options; follow 'grep'
+-i      # Ignore case
+-w      # Match whole words only
+-v      # Invert match (exclude lines with the pattern)
+-n      # Show line numbers of matches
+-c      # Count number of matching lines
+-l      # List filenames with matches
+-o      # Show only matching parts of lines
+```
+
+## lsd
+```bash
+lsd -la
+lsd -lh
+lsd -lS
+lsd -ltr
+
+lsd -d */
+lsd --tree
+```
