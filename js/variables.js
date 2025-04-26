@@ -1,4 +1,3 @@
-// 1. Declaring Variables
 // Use `let` for variables that will be reassigned
 let count = 0;
 count = 5;
@@ -9,7 +8,6 @@ const PI = 3.14159;
 // Avoid using `var` (old syntax, has scoping issues)
 var oldVariable = "Avoid this";
 
-// 2. Naming Variables
 // Use descriptive names
 let userName = "Josh";
 let isLoggedIn = true;
@@ -22,7 +20,6 @@ for (let i = 0; i < 10; i++) {
     console.log(i);
 }
 
-// 3. Best Practices
 // Always initialize variables when declaring
 let age = 25;
 
@@ -45,25 +42,22 @@ for (let attempt = 0; attempt < MAX_RETRIES; attempt++) {
     console.log(`Attempt ${attempt + 1}`);
 }
 
-// 4. Template Literals for Strings
+// Template Literals for Strings
 const firstName = "Josh";
 const greeting = `Hello, ${firstName}!`;
 console.log(greeting);
 
-// 5. Avoid Hoisting Issues
 // Declare variables before using them
 let message = "This is safe!";
 console.log(message);
 
-// 6. Use Strict Mode
 // Enforce stricter parsing and error handling
 "use strict";
 let safeVariable = "Strict mode is enabled!";
 console.log(safeVariable);
 
 
-// Variable Scope
-
+/* SCOPE */
 // Block scope with `let` and `const`
 {
     let blockScopedLet = "I am block-scoped with let";
