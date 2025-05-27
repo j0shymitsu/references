@@ -8,8 +8,8 @@ Inheritance should be used judiciously; it is most appropriate when the relation
 
 ## Docs
 
-[Inheritance] (https://docs.python.org/3/tutorial/classes.html#inheritance)\
-[super()] (https://docs.python.org/3/library/functions.html#super)
+[Inheritance](https://docs.python.org/3/tutorial/classes.html#inheritance)\
+[super()](https://docs.python.org/3/library/functions.html#super)
 
 ## Examples
 
