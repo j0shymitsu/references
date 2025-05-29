@@ -5,7 +5,8 @@
 In Python, a class is a blueprint for creating objects. It defines a new data type, encapsulating attributes and behaviors. Attributes are variables inside the class, and behaviors are defined by methods. Classes allow for the creation of custom types, enabling an organized approach to modeling real-world concepts within code.
 
 An object is an instance of a class. When you create an object, you are instantiating a class, which allocates memory to store the object's attributes and permits access to its methods.
-Docs
+
+## Docs
 
 [Python Classes and Instances](https://docs.python.org/3/tutorial/classes.html)
 
