@@ -12,7 +12,7 @@ An object is an instance of a class. When you create an object, you are instanti
 
 ## Examples
 
-## Defining a class and creating instances:
+### Defining a class and creating instances:
 ```python
 class Wizard:
     mana = 100
