@@ -13,7 +13,7 @@ Inheritance should be used judiciously; it is most appropriate when the relation
 
 ## Examples
 
-## Basic inheritance and using super():
+### Basic inheritance and using super():
 ```python
 class Vehicle:
     def __init__(self, brand):
