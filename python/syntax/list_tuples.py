@@ -4,6 +4,8 @@ names = ["Bob", "Louise", "Sarah", "Fred", "Bob"]
 
 numbers_tuple = (10, 20, 30, 40, 40)
 
+single_element_tuple = (80,)    # comma required for single element tuple
+
 print(numbers)
 print(names)
 print(numbers_tuple)
