@@ -1,5 +1,6 @@
 package exercises;
 
+import exercises.Classes.Employee;
 import syntax.Sorting.JamesBondAgeComparator;
 
 import java.util.ArrayList;
@@ -37,5 +38,22 @@ public class Main
         {
             System.out.println(bond.getName() + " was born in " + bond.getYearOfBirth());
         }
+
+        Employee vc = new Employee("Tim");
+        Employee dean = new Employee("Garfield", vc);
+        Employee headOfDept = new Employee("Linda", dean);
+        Employee informaticsManager = new Employee("Adam", headOfDept);
+        Employee developer = new Employee("Matt", informaticsManager);
+
+        int managerCount = countLineManagement(developer);
+        System.out.println(managerCount);
+    }
+
+    // structural recursion
+    static int countLineManagement(Employee employee) {
+        if (employee.getManager() == null) {
+            return 0;
+        }
+        return 1 + countLineManagement(employee.getManager());
     }
 }
