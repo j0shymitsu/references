@@ -1,11 +1,11 @@
 package portfolio;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
-public class TaskOne {
-
-    public static void main(String[] args) {
+public class WordleNew
+{
+    public static void main(String[] args)
+    {
         System.out.println("\nWORDLE | NEW GAME\n");
         System.out.println("---------------------------------------------------------------------------------------\n");
         System.out.println("Instructions:\n");
@@ -17,25 +17,34 @@ public class TaskOne {
                 "If you guess any letters correctly and they're in the CORRECT place, " +
                 "they will remain in UPPERCASE.\n");
         System.out.println("4. " +
-                "You have FIVE guesses to correct the hidden word, or it's game over! " +
+                "You have SIX guesses to correct the hidden word, or it's game over! " +
                 "After which, the hidden word will be revealed. Let's play!\n\n");
         System.out.println("---------------------------------------------------------------------------------------\n");
 
         // init
         Scanner scanner = new Scanner(System.in);
         String hiddenWord = "STUDY";
-        int numberOfGuesses = 0;
+        int numberOfGuesses = 1;
 
         // game loop
-        while (numberOfGuesses < 5) {
-            return;
+        while (numberOfGuesses <= 6)
+        {
+            System.out.println("Enter your guess: (guess " + numberOfGuesses + " of 6)\n");
+
+            String userGuess = scanner.nextLine();
+            String userGuessFormat = userGuess.trim().toUpperCase();
+
+            if (userGuessFormat.length() != 5)
+            {
+                System.out.println("Guess must be 5 letters long.");
+            }
+            else if (userGuessFormat.equals(hiddenWord))
+            {
+                System.out.println("\nCORRECT! The word was " + hiddenWord + "!");
+                System.out.println("You got it correct in " + numberOfGuesses + " guess(es).");
+                break;
+            }
         }
     }
-
-    public String wordChecker(String hiddenWord, String guessWord) {
-        return null;
-    }
-
-
 }
 
