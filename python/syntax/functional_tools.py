@@ -1,3 +1,6 @@
+from functools import reduce
+
+# lambda functions
 def file_type_getter(file_extension_tuples):
 
     extension_list = {}
@@ -27,3 +30,24 @@ print(get_file_type(".docx"))
 print(get_file_type(".png"))
 print(get_file_type(".mp3"))
 print(get_file_type(".unknown"))
+
+######
+print("\n")
+
+numbers = [1, 2, 3, 4, 5, 6]
+
+# map: apply a function to each item in an iterable
+tripled = map(lambda x: x * 3, numbers)
+print(list(tripled))    # expected output: [3, 6, 9, 12, etc]
+
+# filter: filter items in an iterable by condition
+evens = filter(lambda x: x % 2 == 0, numbers)
+print(list(evens))      # expected output: [2, 4, 6, etc]
+
+# reduce: reduce an iterable to a single value
+product = reduce(lambda x, y: x * y, numbers)
+print(product)
+
+product_init = reduce(lambda x, y: x * y, numbers, 10)  # with initialiser; start with 10 instead of first element
+print(product_init)
+
