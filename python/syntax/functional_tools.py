@@ -35,6 +35,8 @@ print(get_file_type(".unknown"))
 print("\n")
 
 numbers = [1, 2, 3, 4, 5, 6]
+a = [1, 2, 3]
+b = [4, 5, 6]
 
 # map: apply a function to each item in an iterable
 tripled = map(lambda x: x * 3, numbers)
@@ -50,4 +52,8 @@ print(product)
 
 product_init = reduce(lambda x, y: x * y, numbers, 10)  # with initialiser; start with 10 instead of first element
 print(product_init)
+
+# zip: take two iterables and return new iterable where each element is a tuple containing one element from each
+c = list(zip(a, b))
+print(c)
 
