@@ -41,3 +41,17 @@ def attempt_to_modify(inner_num):
 outer_num = 1
 attempt_to_modify(outer_num)
 # outer_num = 1
+
+
+# PURE FUNCTION
+def remove_format(default_formats, old_format):
+    new_formats = default_formats.copy()
+    new_formats[old_format] = False
+    return new_formats
+
+
+# IMPURE FUNCTION
+def remove_format(default_formats, old_format):
+    default_formats[old_format] = False
+    return default_formats
+
