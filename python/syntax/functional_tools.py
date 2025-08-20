@@ -57,3 +57,10 @@ print(product_init)
 c = list(zip(a, b))
 print(c)
 
+# more lambda
+def sort_dates(dates):
+    dates_copy = dates.copy()
+    
+    sorted_dates = sorted(dates_copy, key=lambda date: (date.split('-')[2], date.split('-')[0], date.split('-')[1]))
+    return sorted_dates
+
