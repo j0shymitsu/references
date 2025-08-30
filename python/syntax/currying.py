@@ -41,3 +41,26 @@ def lines_with_sequence(char):
             return count
         return with_length
     return with_char
+
+###
+
+def create_markdown_image(alt_text):
+    alt_text = "![" + alt_text + "]"
+    
+    def escape_characters(url):
+        new_url = url.replace("(", "%28")
+        new_url = new_url.replace(")", "%29")
+        new_url = "(" + new_url + ")"
+        appended_url = alt_text + new_url
+
+        def quote_title(title=None):
+            if title:
+                title = '"' + title + '"'
+                return appended_url[:-1] + " " + title + ")"
+            else:
+                return appended_url
+        return quote_title
+    return escape_characters
+                
+                
+            
