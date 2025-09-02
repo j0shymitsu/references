@@ -84,3 +84,44 @@ def convert_md_to_text(doc):
         lines[i] = line.lstrip("# ")
 
     return "\n".join(lines)
+
+## stacking decorators
+def to_uppercase(func):
+    def wrapper(document):
+        return func(document.upper())
+
+    return wrapper
+
+def get_truncate(length):
+    def truncate(func):
+        def wrapper(document):
+            return func(document[:length])
+
+        return wrapper
+
+    return truncate
+
+@to_uppercase
+@get_truncate(9) # currying
+def print_input(input):
+    print(input)
+
+print_input("Keep Calm and Carry On")
+# prints: "KEEP CALM"
+
+## more decorators
+def replacer(old, new):
+    def decorator(decorated_func):
+        def wrapper(text):
+            modified = text.replace(old, new)
+            return decorated_func(modified)
+        return wrapper
+    return decorator
+
+@replacer("&", "&amp;")
+@replacer("<", "&lt;")
+@replacer(">", "&gt;")
+@replacer('"', "&quot;")
+@replacer("'", "&#x27;")
+def tag_pre(text):
+    return f"<pre>{text}</pre>"
