@@ -1,4 +1,5 @@
 from functools import reduce
+from functools import lru_cache
 
 # lambda functions
 def file_type_getter(file_extension_tuples):
@@ -64,3 +65,12 @@ def sort_dates(dates):
     sorted_dates = sorted(dates_copy, key=lambda date: (date.split('-')[2], date.split('-')[0], date.split('-')[1]))
     return sorted_dates
 
+#lru_cache
+@lru_cache()
+def is_palindrome(word):
+    if len(word) <= 1:
+        return True
+    elif word[0] != word[-1]:
+        return False
+    new_word = word[1:-1]
+    return is_palindrome(new_word)
