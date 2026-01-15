@@ -1,5 +1,30 @@
 # BIG O NOTATION
 
+# O(1) EXAMPLE
+## Dictionary lookups in Python are O(1)
+def find_last_name(names_dict, first_name):
+    if first_name in names_dict:
+        return names_dict[first_name]
+    else:
+        return None
+    
+# O(log(n)) EXAMPLE
+## Binary search algorithm. Works on a pre-sorted list.
+def binary_search(target, arr):
+    low = 0
+    high = len(arr) - 1
+
+    while low <= high:
+        median = (low + high) // 2
+        if arr[median] == target:
+            return True
+        elif arr[median] < target:
+            low = median + 1
+        else:
+            high = median - 1
+    
+    return True
+
 # O(n) EXAMPLE
 def find_max(nums):
     largest = float('-inf')
