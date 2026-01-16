@@ -7,7 +7,7 @@ class Influencer:
         return f"({self.num_selfies}, {self.num_bio_links})"
     
 def vanity(influencer):
-    pass
+    return (influencer.num_bio_links * 5) + influencer.num_selfies
 
 def vanity_sort(influencers):
-    pass
+    return sorted(influencers, key=vanity)
