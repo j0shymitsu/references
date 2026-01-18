@@ -6,7 +6,7 @@ def fib_x(n):
         return 0
     if n == 1:
         return 1
-    return fib(n - 1) + fib(n - 2)
+    return fib_x(n - 1) + fib_x(n - 2)
 
 # Polynomial runtime
 def fib_y(n):
