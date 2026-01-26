@@ -95,6 +95,12 @@ class BSTNode:
         return max(left_height, right_height) + 1
     
 # RED-BLACK TREE
+## - Each node is either red or black
+## - The root is black (sometimes omitted)
+## - All Nil leaf nodes are black
+## - If a node is red, then both its children are black
+## - All paths from a single node go through the same number of black nodes
+## in order to reach any of its descendant Nil nodes.
 class RBNode:
     def __init__(self, val):
         self.red = False
@@ -110,6 +116,8 @@ class RBTree:
         self.nil.left = None
         self.nil.right = None
         self.root = self.nil
+
+    
 
     def insert(self, val):
         new_node = RBNode(val)
@@ -139,3 +147,100 @@ class RBTree:
             parent.left = new_node
         else:
             parent.right = new_node
+
+        self.fix_insert(new_node)
+
+    def fix_insert(self, new_node):
+        current = new_node
+        while current != self.root and current.parent.red:
+            parent = current.parent
+            grandparent = parent.parent
+
+            if grandparent is None:
+                break
+            
+            if parent == grandparent.left:
+                uncle = grandparent.right
+                if uncle.red:
+                    uncle.red = False
+                    parent.red = False
+                    grandparent.red = True
+                    current = grandparent
+                else:
+                    if current == parent.right:
+                        current = parent
+                        self.rotate_left(current)
+                        parent = current.parent
+                    parent.red = False
+                    grandparent.red = True
+                    self.rotate_right(grandparent)
+            else:
+                uncle = grandparent.left
+                if uncle.red:
+                    uncle.red = False
+                    parent.red = False
+                    grandparent.red = True
+                    current = grandparent
+                else:
+                    if current == parent.left:
+                        current = parent
+                        self.rotate_right(current)
+                        parent = current.parent
+                    parent.red = False
+                    grandparent.red = True
+                    self.rotate_left(grandparent)
+        
+        self.root.red = False
+    
+    def exists(self, val):
+        curr = self.root
+        while curr != self.nil and val != curr.val:
+            if val < curr.val:
+                curr = curr.left
+            else:
+                curr = curr.right
+        return curr
+
+    def rotate_left(self, pivot_parent):
+        if pivot_parent == self.nil or pivot_parent.right == self.nil:
+            return
+        
+        pivot = pivot_parent.right
+        pivot_parent.right = pivot.left
+
+        if pivot.left != self.nil:
+            pivot.left.parent = pivot_parent
+        pivot.parent = pivot_parent.parent
+
+        if pivot_parent == self.root:
+            self.root = pivot
+        else:
+            if pivot_parent == pivot_parent.parent.left:
+                pivot_parent.parent.left = pivot
+            if pivot_parent == pivot_parent.parent.right:
+                pivot_parent.parent.right = pivot
+        
+        pivot.left = pivot_parent
+        pivot_parent.parent = pivot
+
+    def rotate_right(self, pivot_parent):
+        if pivot_parent == self.nil or pivot_parent.left == self.nil:
+            return
+        
+        pivot = pivot_parent.left
+        pivot_parent.left = pivot.right
+
+        if pivot.right != self.nil:
+            pivot.right.parent = pivot_parent
+        pivot.parent = pivot_parent.parent
+
+        if pivot_parent == self.root:
+            self.root = pivot
+        else:
+            if pivot_parent == pivot_parent.parent.right:
+                pivot_parent.parent.right = pivot
+            if pivot_parent == pivot_parent.parent.left:
+                pivot_parent.parent.left = pivot
+        
+        pivot.right = pivot_parent
+        pivot_parent.parent = pivot
