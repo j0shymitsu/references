@@ -244,3 +244,16 @@ class RBTree:
         
         pivot.right = pivot_parent
         pivot_parent.parent = pivot
+
+
+# COUNT NODES
+class Node:
+    def __init__(self, value, left=None, right=None):
+        self.value = value
+        self.left = left
+        self.right = right
+
+    def count_nodes(root):
+        if root is None:
+            return 0
+        return 1 + count_nodes(root.left) + count_nodes(root.right)
