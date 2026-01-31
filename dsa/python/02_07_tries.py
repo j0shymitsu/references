@@ -41,5 +41,18 @@ class Trie:
             else:
                 current_level = current_level[char]
             return self.search_level(current_level, prefix, matching_words)
+        
+    def find_matches(self, document):
+        matches = set()
+        for i in range(len(document)):
+            level = self.root
+            for j in range(i, len(document)):
+                ch = document[j]
+                if ch not in level:
+                    break
+                level = level[ch]
+                if self.end_symbol in level:
+                    matches.add(document[i : j + 1])
+        return matches
 
     
