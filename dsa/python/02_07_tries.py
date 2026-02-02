@@ -54,6 +54,22 @@ class Trie:
                 if self.end_symbol in level:
                     matches.add(document[i : j + 1])
         return matches
+
+    def advanced_find_matches(self, document, variations):
+        matches = set()
+        for i in range(len(document)):
+            level = self.root
+            for j in range(i, len(document)):
+                ch = document[j]
+                for key in variations.keys():
+                    if ch ==  key:
+                        ch = variations[key]
+                if ch not in level:
+                    break
+                level = level[ch]
+                if self.end_symbol in level:
+                    matches.add(document[i : j + 1])
+        return matches
     
     def longest_common_prefix(self):
         current = self.root
