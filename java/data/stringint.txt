@@ -1,9 +1,0 @@
-hello
-123
-world
-999
-java
-10
-python
-rust
-1

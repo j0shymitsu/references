@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Image Formats</title>
+</head>
+<body>
+    <h1>Image Formats</h1>
+
+    <h3>Lossy vs. Lossless</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Format</th>
+                <th>Compression Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>JPEG</td>
+                <td>Lossy</td>
+            </tr>
+            <tr>
+                <td>PNG</td>
+                <td>Lossless</td>
+            </tr>
+            <tr>
+                <td>GIF</td>
+                <td>Lossless (indexed color, up to 256 colors)</td>
+            </tr>
+            <tr>
+                <td>WebP</td>
+                <td>Offers both lossy and lossless modes</td>
+            </tr>
+            <tr>
+                <td>BMP</td>
+                <td>Typically uncompressed (or RLE-based, lossless)</td>
+            </tr>
+            <tr>
+                <td>TIFF</td>
+                <td>Often lossless (supports optional JPEG-based lossy)</td>
+            </tr>
+            <tr>
+                <td>SVG</td>
+                <td>Vector-based (not raster-based compression; can be gzipped but not “lossy” in the same sense)</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+
+    <h3>Animation Support</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Format</th>
+                <th>Animation Support</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>JPEG</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>PNG</td>
+                <td>No (though APNG is an extension that supports animation)</td>
+            </tr>
+            <tr>
+                <td>GIF</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>WebP</td>
+                <td>Yes (in animated WebP)</td>
+            </tr>
+            <tr>
+                <td>BMP</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>TIFF</td>
+                <td>Yes (multi-page TIFF can be used for basic animation, though not common on the web)</td>
+            </tr>
+            <tr>
+                <td>SVG</td>
+                <td>Yes (through SMIL animations or CSS/JavaScript; not a “frame-by-frame” raster animation)</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+
+    <h3>Transparency Support</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Format</th>
+                <th>Transparency Support</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>JPEG</td>
+                <td>No (no alpha channel)</td>
+            </tr>
+            <tr>
+                <td>PNG</td>
+                <td>Yes (full alpha channel)</td>
+            </tr>
+            <tr>
+                <td>GIF</td>
+                <td>Yes (1-bit transparency; on/off only)</td>
+            </tr>
+            <tr>
+                <td>WebP</td>
+                <td>Yes (supports alpha channel in lossless & lossy modes)</td>
+            </tr>
+            <tr>
+                <td>BMP</td>
+                <td>Not typically (standard BMP has no alpha channel)</td>
+            </tr>
+            <tr>
+                <td>TIFF</td>
+                <td>Yes (supports alpha channel in many implementations)</td>
+            </tr>
+            <tr>
+                <td>SVG</td>
+                <td>Yes (vector shapes can be fully or partially transparent)</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+
+    <h3>Raster vs Vector</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Format</th>
+                <th>Raster or Vector</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>JPEG</td>
+                <td>Raster</td>
+            </tr>
+            <tr>
+                <td>PNG</td>
+                <td>Raster</td>
+            </tr>
+            <tr>
+                <td>GIF</td>
+                <td>Raster</td>
+            </tr>
+            <tr>
+                <td>WebP</td>
+                <td>Raster</td>
+            </tr>
+            <tr>
+                <td>BMP</td>
+                <td>Raster</td>
+            </tr>
+            <tr>
+                <td>TIFF</td>
+                <td>Raster</td>
+            </tr>
+            <tr>
+                <td>SVG</td>
+                <td>Raster</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+
+    <h4>Notes</h4>
+    <h5>Lossy vs. Lossless:</h5>
+    <ul>
+        <li>Lossy sacrifices exact detail for smaller file size (e.g., JPEG).</li>
+        <li>Lossless retains all original data when compressed (e.g., PNG, GIF).</li>
+    </ul>
+    <h5>Animation:</h5>
+    <ul>
+        <li>GIF and WebP are commonly used for web animation.</li>
+        <li>PNG’s APNG extension allows animation, but it’s less universally supported.</li>
+        <li>TIFF supports multi-page images, but it’s rarely used for actual animations online.</li>
+        <li>SVG can be animated using markup/CSS but is fundamentally different from frame-based raster animation.</li>
+    </ul>
+    <h5>Transparency:</h5>
+    <ul>
+        <li>PNG and WebP offer full alpha-channel transparency.</li>
+        <li>GIF supports only on/off transparency for one color.</li>
+        <li>JPEG does not support transparency.</li>
+    </ul>
+    <h5>Raster vs. Vector:</h5>
+    <ul>
+        <li>Raster images are defined by a grid of pixels—scaling too large can pixelate or blur them.</li>
+        <li>Vector images are defined by mathematical shapes/paths—infinitely scalable without quality loss.</li>
+    </ul>
+</body>
+</html>
